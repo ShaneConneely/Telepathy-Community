@@ -224,6 +224,9 @@ def cli(
     '''End of API details'''
 
     client = TelegramClient(phone_number, api_id, api_hash)
+    client.start()
+
+    print(client.get_me().stringify())
 
     async def main():
 
